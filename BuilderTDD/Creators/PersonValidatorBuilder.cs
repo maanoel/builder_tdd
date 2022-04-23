@@ -2,23 +2,23 @@
 
 namespace BuilderTDD.Models
 {
-  public class PersonBuilderValidator
+  public class PersonValidatorBuilder
   {
     public Person Person { get; private set; }
     public List<ICommandValidation> CommandList { get; private set; }
 
-    public PersonBuilderValidator()
+    public PersonValidatorBuilder()
     {
       CommandList = new List<ICommandValidation>();
     }
 
-    public PersonBuilderValidator AddPerson(Person person)
+    public PersonValidatorBuilder AddPerson(Person person)
     {
       Person = person;
       return this;
     }
 
-    public PersonBuilderValidator AddValidation(ICommandValidation commandValidation)
+    public PersonValidatorBuilder AddValidation(ICommandValidation commandValidation)
     {
       CommandList.Add(commandValidation);
       return this;

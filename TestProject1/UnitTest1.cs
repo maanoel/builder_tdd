@@ -14,7 +14,7 @@ namespace TestProject1
       person.name = "vitor brito";
       person.oz = 5;
 
-      PersonBuilderValidator personBuilderValidator = new PersonBuilderValidator();
+      PersonValidatorBuilder personBuilderValidator = new PersonValidatorBuilder();
       personBuilderValidator.AddPerson(person);
 
       personBuilderValidator.AddValidation(new AgeMoreThan18());
