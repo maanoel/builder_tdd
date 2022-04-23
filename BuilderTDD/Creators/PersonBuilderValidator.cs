@@ -28,7 +28,7 @@ namespace BuilderTDD.Models
     {
       foreach (var validation in CommandList)
       {
-        if (validation.Validate(Person))
+        if (!validation.Validate(Person))
           return new PersonValidator(false);
       }
 
